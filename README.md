@@ -1,24 +1,33 @@
-# README
+# BOOKWRM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to bookwrm, the social book review app! In this app you will be able to register and log in as a user,
+view a collection of books, and read or leave reviews for individual books.
 
-Things you may want to cover:
+This app is developed with Ruby on Rails, and deployed on Heroku.
 
-* Ruby version
+## Getting Started
+### Prerequisites
++ Ruby 2.4.4
++ Rails 5.2.1
++ Postgres 9.6
 
-* System dependencies
+### Setup the App
++ Fork the repo to your github account
++ `git clone git@github.com:YOUR-USERNAME/bookwrm.git`
++ `cd bookwrm`
++ update `application.yml`, `database.yml`
 
-* Configuration
+### Running in Development
++ `bundle install`
++ `bundle exec rake db:create db:migrate db:seed`
++ `rails s`
++ open `localhost:3000`
 
-* Database creation
+### Deployment
+-- TODO --
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### References
++ [Ruby](https://www.ruby-lang.org/en/)
++ [Rails](https://rubyonrails.org/)
++ [Devise](https://github.com/plataformatec/devise)
++ [Heroku](https://www.heroku.com/)
