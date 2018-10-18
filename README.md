@@ -13,13 +13,13 @@ This app is developed with Ruby on Rails, and deployed on Heroku.
 
 ### Setup the App
 + Fork the repo to your github account
-+ `git clone git@github.com:YOUR-USERNAME/bookwrm.git`
-+ `cd bookwrm`
++ `git clone git@github.com:YOUR-USERNAME/bookwrm-starter.git`
++ `cd bookwrm-starter`
 + update `application.yml`, `database.yml`
 
 ### Running in Development
 + `bundle install`
-+ `bundle exec rake db:create db:migrate db:seed`
++ `bundle exec rake db:create db:migrate`
 + `rails s`
 + open `localhost:3000`
 
