@@ -1,0 +1,19 @@
+/*-----------------------
+Column Width
+-----------------------*/
+.row{
+  display: inline-block;
+  width: 100%;
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      @include media($tablet){
+        @include span-columns($i of 12);
+      }
+    }
+  }
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}

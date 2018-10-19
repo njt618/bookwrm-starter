@@ -1,0 +1,70 @@
+// Site Navigation Styles
+// ========================================
+$mobile-nav-height: 58px;
+$desktop-nav-height: 70px;
+$tablet-nav-height: 90px;
+
+.navigation {
+  //@include position(absolute, 0px 0px null 0px);
+  text-align: center;
+  width: 100%;
+}
+
+/*-----------------------
+Logo
+-----------------------*/
+.logo{
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 5px;
+  width: 150px;
+  float: left;
+  display: block;
+
+  @include media($tablet){
+    width: 150px;
+  }
+
+  a{
+    vertical-align: sub;
+  }
+
+  &:hover, &:focus{
+    color: $white-base;
+    opacity: 0.6;
+  }
+}
+
+/*-----------------------
+Primary Nav
+-----------------------*/
+.navigation{
+  //@include position(absolute, 0px null null null);
+  @include transition(all 0.3s ease-in-out);
+  width: 100%;
+  z-index: 2;
+  padding: 8px 20px;
+  display: inline-block;
+
+  @include media($tablet){
+    //@include position(absolute, 10px null null null);
+  }
+
+
+  nav{
+    display: inline-block;
+    float: right;
+    margin: 17px 0px 0px 25px;
+    text-align: right;
+
+    a{
+      @include s-base;
+      text-decoration: none;
+      @include rem(margin, 0 0 0 25px);
+
+      &:hover, &:focus{
+        opacity: 0.6;
+      }
+    }
+  }
+}

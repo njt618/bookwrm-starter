@@ -1,0 +1,44 @@
+/*-----------------------
+Content Header
+-----------------------*/
+.page-header{
+  //background-color: $purple-base;
+  background: linear-gradient(to left, #da4453, #89216b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: cover !important;
+  position: relative;
+  z-index: 1;
+
+  @include media($tablet-landscape){
+   //height: 200px;
+  }
+
+  .header-block-container{
+    padding: 60px 20px 60px;
+    width: 100%;
+
+    @include media($tablet){
+      //padding-top: 60px;
+    }
+
+    @include media($tablet-landscape){
+      //@include vertical-horizontal-center;
+      max-width: 1200px !important;
+
+      .text-block{
+        margin-top: 40px;
+      }
+    }
+  }
+
+  h1{
+    color: $white-base;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0px;
+  }
+
+  a{
+    float: right;
+  }
+}
