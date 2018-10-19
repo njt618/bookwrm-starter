@@ -5,9 +5,11 @@ ruby '2.4.4'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'coffee-rails', '~> 4.2'
+gem 'bourbon', '~> 4.0'
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'jbuilder', '~> 2.5'
+gem 'neat', '~> 1.7.4'
 gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'

@@ -1,0 +1,114 @@
+// Buttons Component Styles
+// ========================================
+
+// Main Button
+@mixin button{
+  border-radius: 5px;
+  display: inline-block;
+  @include font-type($primary-sans-serif, normal, $bold);
+  @include rem(padding, 10px);
+  @include s-base;
+  @include transition (all 0.3s ease-in-out);
+  letter-spacing: 0.5px;
+  line-height: normal;
+  min-width: 120px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  &[class*=-outline]{
+    box-shadow: none;
+  }
+
+  text{
+    align: center;
+    decoration: none;
+  }
+  -webkit-appearance: none;
+
+  &:hover{ cursor: pointer; }
+
+  &:focus{
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+// Button Styles
+@each $button in $buttons{
+  $type:        nth($button, 1);
+  $bg-1:        nth($button, 2);
+  $border:      nth($button, 3);
+  $color:       nth($button, 4);
+  $hover-bg:    nth($button, 5);
+  $hover-color: nth($button, 6);
+
+  .button-#{$type}{
+    background-color: $bg-1;
+    border: 1px solid $border;
+    color: $color;
+    @include button;
+
+    &:hover{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: $hover-color;
+      opacity: 1;
+    }
+
+    &:active{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: darken($hover-color, 5%);
+    }
+
+    &:focus{ border: 1px solid $hover-bg; }
+
+    &:disabled{
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  // Links
+  .link-#{$type}{
+    color: $bg-1;
+    display: inline-block;
+    @include s-base;
+    @include font-type($primary-sans-serif, normal, $bold);
+    @include transition(all 0.3s ease-in-out);
+    @include rem(margin-bottom, 20px);
+    text-decoration: none;
+
+    &:hover{
+      color: $hover-bg;
+    }
+  }
+}
+
+a, .link{
+  &:hover{
+
+    i{
+      margin-left: 13px;
+    }
+  }
+
+  i{
+    @include transition(all 0.3s ease-in-out);
+    margin-left: 8px;
+  }
+}
+
+// Buton Sizes
+.button-small {
+  @include rem(padding, 10px 15px);
+  @include s-base;
+  min-width: inherit;
+}
+
+.button-large {
+   @include rem(padding, 15px 12px);
+}

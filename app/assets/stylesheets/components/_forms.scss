@@ -1,0 +1,176 @@
+/*-----------------------
+Fieldset
+-----------------------*/
+.field{
+  display: inline-block;
+  @include rem(margin-bottom, 18px);
+  position: relative;
+  width: 100%;
+
+  span span{
+    float: right;
+
+    [class*=link-]{
+      @include s-small;
+      margin-top: 0px;
+      vertical-align: middle;
+    }
+  }
+}
+
+/*-----------------------
+Labels
+-----------------------*/
+label{
+  color: $black-base;
+  display: inline-block;
+  @include font-type($primary-sans-serif, normal, $bold);
+  @include s-base;
+  @include rem(margin-bottom, 6px);
+  text-align: left;
+  width: auto;
+
+  i{
+    font-style: italic;
+    font-weight: $regular;
+  }
+
+  span{
+    float: right;
+
+    a{
+      @include s-small;
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+}
+
+/*-----------------------
+Inputs
+-----------------------*/
+#{$all-text-inputs},
+select,
+textarea{
+  background-color: $white-base;
+  border: 1px solid lighten($white-dark, 20%);
+  border-radius: 4px;
+  box-sizing: border-box;
+  @include appearance(none);
+  @include transition (all 0.3s ease-in-out);
+  @include font-type($primary-sans-serif, normal, 400);
+  @include s-base;
+  @include rem(padding, 13px);
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  @include placeholder{
+    color: $white-dark;
+    font-style: italic;
+  }
+
+  &:focus{
+    border-color: $blue-base;
+    outline: none;
+  }
+}
+
+/*-----------------------
+Textarea
+-----------------------*/
+textarea,
+textarea[type="text"]{
+  height: 100px;
+  resize: vertical;
+  @include s-base;
+}
+
+
+/*-----------------------
+Select
+-----------------------*/
+select{
+  background-image: image_url('dropdown.svg');
+  background-position: right 10px top 20px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+  @include rem(padding, 13px 32px 13px 13px);
+  text-overflow: ellipsis;
+  width: 100%;
+
+  option:disabled{
+    color: $grey-light;
+    font-style: italic;
+  }
+}
+
+
+/*-----------------------
+Checkbox
+-----------------------*/
+.checkbox{
+  width: 100%;
+
+  label{
+    cursor: pointer;
+    float: right;
+    line-height: normal;
+    width: calc(100% - 32px);
+    margin: 0px;
+    vertical-align: super;
+  }
+}
+
+input[type="checkbox"]{
+  @include appearance(none);
+  @include transition (all 0.3s ease-in-out);
+  background-color: $white-base;
+  border: 1px solid $white-med;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  @include rem(height, 20px);
+  @include rem(width, 20px);
+  outline: none;
+  display: inline-block;
+  @include rem(margin, 0px 8px 0px 0px);
+
+  &:focus{
+    border-color: $purple-base;
+    outline: none;
+  }
+
+  &:checked{
+    background-color: $purple-base;
+
+    &:after{
+      background-image: image_url('checkmark.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 13px;
+      color: $purple-base;
+      content: '';
+      display: block;
+      font-size: 17px;
+      font-weight: $bold;
+      height: 17px;
+      @include transition(all 0.2s ease-in);
+      margin-left: 1px;
+      @include position(absolute, 2px null null 1px);
+      text-align: center;
+      width: 17px;
+      padding: 4px;
+      -webkit-position: absolute;
+      -webkit-z-index: 3;
+    }
+  }
+}
+
+//Actions
+
+.actions{
+  .button-primary{
+    width: 100%;
+  }
+}

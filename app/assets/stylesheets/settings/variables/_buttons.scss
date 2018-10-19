@@ -1,0 +1,10 @@
+// Buttons
+// ========================================
+
+$buttons: (
+  (primary,     $purple-base,    $purple-base,    $white-base,   $purple-dark,    $white-base)
+  (secondary,     $grey-base,    $grey-base,    $white-base,   $grey-dark,    $white-base)
+  (secondary-outline,     transparent,    $grey-base,    $grey-base,   $grey-base,    $black-base)
+  (white-outline,     transparent,    $white-base,    $white-base,   $white-base,    $black-base)
+  (white,     $white-base,    $white-base,    $black-base,   $white-med,    $black-base)
+);

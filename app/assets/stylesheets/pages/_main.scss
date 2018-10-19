@@ -1,0 +1,296 @@
+[class*=-block-container]{
+  @include base-padding;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+
+label{
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.split-view{
+  background-image: image_url('book-stack.jpg');
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  z-index: 0;
+
+  @include media($tablet-landscape){
+    display: inline-block;
+  }
+
+  .form-block-container{
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .text-block{
+    max-width: 500px;
+
+    .additional-links p{
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+}
+
+.card{
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+.books{
+  display: inline-block;
+  width: 100%;
+
+  .book{
+    margin-top: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+
+    @include media($tablet){
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+
+    @include media($tablet-landscape){
+      @include omega-reset(2n);
+      @include span-columns(4 of 12);
+      @include omega(3n);
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .book-cover{
+      img{
+        width: 100px;
+        margin-right: 0px;
+        box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+        display: inline-block;
+      }
+    }
+
+    .text-block{
+      width: calc(100% - 140px);
+      display: inline-block;
+      margin-left: 30px;
+
+      img{
+        margin-top: 4px;
+        margin-right: 10px;
+        width: 80px;
+        vertical-align: middle;
+      }
+
+      a{
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      p{
+        @include s-small;
+      }
+
+      h5{
+        margin-bottom: 5px;
+      }
+
+      h6{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+//Forms
+.form-block-container{
+  max-width: 600px;
+
+  .button-secondary-outline{
+    width: 100%;
+  }
+}
+
+#error_explanation{
+  background-color: $red-light;
+  border: 1px solid $red-base;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h2{
+    @include s-medium;
+    color: $red-base;
+    margin-bottom: 10px;
+  }
+}
+
+//Book
+section{
+  display: inline-block;
+  width: 100%;
+}
+
+.book-wrapper{
+  /* Rectangle: */
+  background-image: linear-gradient(0deg, #F2F2F2 0%, rgba(255,255,255,0.00) 100%);
+
+ h6{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+}
+
+.book-block-container{
+  @include media($tablet){
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .button-primary{
+    margin-right: 20px;
+  }
+
+  img{
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+    max-width: 200px;
+
+    @include media($tablet){
+      max-width: 300px;
+      @include span-columns(4 of 12);
+    }
+  }
+
+  .text-block{
+    margin-top: 30px;
+
+    @include media($tablet){
+      @include span-columns(7 of 12);
+      @include shift(1);
+      margin-top: 0px;
+    }
+
+    img{
+      box-shadow: none;
+    }
+  }
+}
+
+.reviews-block-container{
+
+  .reviews{
+    display: inline-block;
+    width: 100%;
+  }
+
+  .review{
+    margin-top: 20px;
+
+    @include media($tablet){
+      @include span-columns(4 of 12);
+      @include omega(3n);
+    }
+
+    .user-initials{
+      background-color: #A2A6F7;
+      border-radius: 20em;
+      color: $white-base;
+      display: inline-block;
+      height: 50px;
+      @include s-medium;
+      line-height: 3;
+      margin-right: 10px;
+      text-align: center;
+      width: 50px;
+      vertical-align: middle;
+    }
+
+    .text-block{
+      display: inline-block;
+      width: calc(100% - 70px);
+      vertical-align: middle;
+
+      .timestamp{
+        @include s-small;
+      }
+    }
+
+    .description{
+      margin-top: 10px;
+    }
+  }
+}
+
+.rating-stars{
+  margin-top: 5px;
+
+  img{
+    display: inline-block;
+    margin-right: 5px;
+    width: 100px;
+    vertical-align: middle;
+  }
+
+  .timestamp{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+#notice{
+  margin: 0px;
+}
+
+.table-block-container{
+  table{
+    width: 100%;
+  }
+}
+
+.favorites{
+  [data-method="post"]{
+    &:before{
+      background-image: image_url('heart-outlined.svg');
+      background-size: 100%;
+      content: "";
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+      opacity: 0.3;
+    }
+  }
+
+  [data-method="delete"]{
+    &:before{
+      background-image: image_url('heart.svg');
+      background-size: 100%;
+      content: "";
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}
