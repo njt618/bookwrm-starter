@@ -24,7 +24,12 @@ This app is developed with Ruby on Rails, and deployed on Heroku.
 + open `localhost:3000`
 
 ### Deployment
--- TODO --
+### Deployment
++ Sign up for Heroku at `https://signup.heroku.com/`
++ Create a new app at `https://dashboard.heroku.com/new-app`
++ Connect the app to this GitHub repository
++ Deploy the `master` branch through `Manual deploy`
++ Click on `Open App` in the top right corner of the page, and view the app in the browser!
 
 ### References
 + [Ruby](https://www.ruby-lang.org/en/)
