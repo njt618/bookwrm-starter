@@ -15,7 +15,7 @@ This app is developed with Ruby on Rails, and deployed on Heroku.
 + Fork the repo to your github account
 + `git clone git@github.com:YOUR-USERNAME/bookwrm-starter.git`
 + `cd bookwrm-starter`
-+ update `application.yml`, `database.yml`
++ update `database.yml`*
 
 ### Running in Development
 + `bundle install`
