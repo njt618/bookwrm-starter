@@ -1,0 +1,12 @@
+<header class="page-header">
+	<div class="header-block-container">
+		<h1>New Author</h1>
+		<%= link_to 'Back', authors_path, class: 'button-white-outline' %>
+	</div>
+</header>
+
+<div class="form-block-container">
+	<div class="card">
+		<%= render 'form', author: @author %>
+	</div>
+</div>
