@@ -1,14 +1,16 @@
 <header class="page-header">
 	<div class="header-block-container">
 		<h1><%= @author.full_name %></h1>
+		  <% if current_user.present? %>
 		<%= link_to 'Edit', edit_author_path(@author), class: 'button-white-outline' %>
+		<% end %>
 	</div>
 </header>
 
 <div class="form-block-container">
 	<div class="card">
 		<%= render 'form', author: @author %>
-		
+
 <p id="notice"><%= notice %></p>
 
 <p>
